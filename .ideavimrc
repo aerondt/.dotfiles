@@ -1,0 +1,75 @@
+" common
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+set number relativenumber
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set et
+set ai
+set showmatch
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set lz
+set visualbell
+nmap <SPACE> <Nop>
+
+let mapleader = " "
+
+" replace Esc
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap jj <Esc>
+inoremap kk <Esc>
+
+" system clipboard
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+" search
+nmap / :action FindInPath<CR>
+nmap <leader>/ :action ReplaceInPath<CR>
+
+" Terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+" nnoremap <Leader>t :action ActivateTerminalToolWindow<CR>
+" nmap <c-T> :action Terminal.OpenInTerminal<CR>
+
+" actions
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader><leader> <action>(ShowErrorDescription)
+nmap <c-/> :action CommentByLineComment<CR>
+nmap <Leader>rff :action ReformatCode<CR>
+nnoremap <Leader>\ :action SplitVertically<CR>
+nnoremap <Leader>- :action SplitHorizontally<CR>
+nnoremap <Leader>D :action ToggleDistractionFreeMode<CR>
+nmap <Leader>G :action GotoDeclaration<CR>
+nmap <Leader>H <c-w>h
+nmap <Leader>L <c-w>L
+nnoremap <leader>s :action SaveAll<CR>
+nmap <leader>n :action NewFile<CR>
+" nmap <Leader>v :action EditorSelectWord<CR>
+
+set NERDTree
+nmap <Leader>e ActivateProjectToolWindow
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
